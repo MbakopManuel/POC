@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+WORKDIR /app
+
+COPY ./Job.Microservice/bin/Release/net5.0/publish/. .
+RUN mkdir wwwroot
+ENV ASPNETCORE_URLS http://*:80
+ENTRYPOINT ["dotnet", "Job.Microservice.dll"]

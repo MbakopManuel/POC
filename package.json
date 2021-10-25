@@ -1,0 +1,20 @@
+{
+	"name": "POC",
+	"version": "1.0.0",
+	"projects": [
+		{ 
+			"name": "Gateway.WebApi",
+			"port": "5000",
+			"dockerUrl": "192.168.10.4",
+			"references": [],
+			"services": []
+		}, 
+		{ 
+			"name": "Job.Microservice",
+			"port": "5001",
+			"dockerUrl": "192.168.10.5",
+			"references": [],
+			"services": ["Job","Request","Response"]
+		}
+	]
+}
