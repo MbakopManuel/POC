@@ -1,0 +1,55 @@
+{
+	"Routes": [
+		{ 
+			"DownstreamPathTemplate": "/job/advancesync",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host":"localhost",
+					"Port": 5001
+				}
+			],
+			"UpstreamPathTemplate": "/api/job/advancesync",
+			"UpstreamHttpMethod":[ "GET", "OPTIONS" ],
+			"SwaggerKey": "Jobs"
+		}, 
+		{ 
+			"DownstreamPathTemplate": "/job/advancesync/status/reqId/{id}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host":"localhost",
+					"Port": 5001
+				}
+			],
+			"UpstreamPathTemplate": "/api/job/advancesync/status/reqId/{id}",
+			"UpstreamHttpMethod":[ "GET",  "OPTIONS" ],
+			"SwaggerKey": "Jobs"
+		},
+		{ 
+			"DownstreamPathTemplate": "/job/advancesync/result/reqId/{id}",
+			"DownstreamScheme": "http",
+			"DownstreamHostAndPorts": [
+				{
+					"Host":"localhost",
+					"Port": 5001
+				}
+			],
+			"UpstreamPathTemplate": "/api/job/advancesync/result/reqId/{id}",
+			"UpstreamHttpMethod":[ "GET",  "OPTIONS" ],
+			"SwaggerKey": "Jobs"
+		}
+	],
+	"SwaggerEndPoints": [
+		{ 
+			"Key": "Jobs",
+			"Config": [
+				{
+					"Name":"Jobs Microservice API",
+					"Version": "v1",
+					"Url": "http://localhost:5001/swagger/v1/swagger.json"
+				}
+			]
+		}
+	]
+}
